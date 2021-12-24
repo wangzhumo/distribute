@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item
+        android:drawable="@color/white"
+        android:gravity="fill" />
+
+    <!--背景-->
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/bg_splash" />
+    </item>
+    <!--显示中间的logo-->
+    <item
+        android:width="70dp"
+        android:height="85dp"
+        android:gravity="center">
+        <bitmap android:src="@drawable/login_ic_yinyu_pic" />
+    </item>
+</layer-list>

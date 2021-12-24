@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/screen_home">
+    <fragment
+        android:id="@+id/screen_home"
+        android:name="com.wangzhumo.distribute.pages.home.HomeFragment"
+        android:label="home">
+    </fragment>
+    <fragment
+        android:id="@+id/screen_search_page"
+        android:name="com.wangzhumo.distribute.pages.search.SearchFragment"
+        android:label="search">
+    </fragment>
+</navigation>
