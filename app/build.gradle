@@ -1,0 +1,95 @@
+import com.wangzhumo.distribute.buildsrc.Libs
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.wangzhumo.distribute"
+        minSdk 21
+        targetSdk 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
+        kotlinCompilerVersion Libs.Kotlin.version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation Libs.Kotlin.stdlib
+    implementation Libs.Coroutines.android
+
+    implementation Libs.AndroidX.coreKtx
+    implementation Libs.AndroidX.appcompat
+    implementation Libs.AndroidX.Navigation.fragment
+    implementation Libs.AndroidX.Navigation.uiKtx
+    implementation Libs.AndroidX.Navigation.compose
+    implementation Libs.AndroidX.Material.material
+    implementation Libs.material
+
+    implementation Libs.Coil.coilCompose
+
+    implementation Libs.AndroidX.Lifecycle.viewmodel
+    implementation Libs.AndroidX.Lifecycle.viewModelCompose
+    implementation Libs.AndroidX.Activity.activityCompose
+    implementation Libs.AndroidX.Splash.splashScreen
+
+    implementation Libs.AndroidX.Compose.layout
+    implementation Libs.AndroidX.Compose.material
+    implementation Libs.AndroidX.Compose.materialIconsExtended
+    implementation Libs.AndroidX.Compose.tooling
+    implementation Libs.AndroidX.Compose.runtime
+    implementation Libs.AndroidX.Compose.runtimeLivedata
+
+    implementation Libs.AndroidX.Paging.paging_runtime
+    implementation Libs.AndroidX.Paging.paging_compose
+
+    implementation Libs.Accompanist.permissions
+    implementation Libs.Accompanist.insets
+    implementation Libs.Accompanist.insets_ui
+    implementation Libs.Accompanist.systemuicontroller
+    implementation Libs.Accompanist.viewpager
+    implementation Libs.Accompanist.swiperefresh
+    implementation Libs.Accompanist.indicators
+
+    implementation Libs.Okhttp.okhttp
+    implementation Libs.Okhttp.okhttp_logger
+
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.retrofit_gson
+    implementation Libs.Retrofit.retrofit_scalars
+    implementation 'androidx.test.ext:junit-ktx:1.1.2'
+}
