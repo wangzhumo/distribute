@@ -17,3 +17,12 @@ local.properties
 
 gradlew
 gradlew.bat
+
+
+androidTest
+test
+
+gradle
+build
+
+.idea
