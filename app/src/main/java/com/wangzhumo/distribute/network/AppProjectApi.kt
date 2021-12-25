@@ -20,7 +20,7 @@ import retrofit2.http.Query
 interface AppProjectApi {
 
     // 获取Version的列表
-    @GET("vl/info/list")
+    @GET("v1/info/list")
     suspend fun requestVersionList(
         @Query("last_id") last_id:Long,
         @Query("size") size:Int,
@@ -30,19 +30,19 @@ interface AppProjectApi {
 
 
     // 获取Version的详情
-    @GET("vl/info/apkinfo")
+    @GET("v1/info/apkinfo")
     suspend fun requestAppInfo(
         @Query("id") id:Int
     ):ApiResponse<VersionInfo>
 
     // 下载指定版本
-    @GET("vl/apk/download")
+    @GET("v1/apk/download")
     suspend fun download(
         @Query("id") id:Int
     ): ResponseBody
 
     companion object {
-        private const val BASE_URL = "http://192.168.105.73:8990/"
+        private const val BASE_URL = "http://192.168.44.71:8990/"
 
         fun create():AppProjectApi {
             val looger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {

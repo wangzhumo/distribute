@@ -145,7 +145,7 @@ fun CurrentInstallVersion(collectAsState: LocalAppProject?) {
             Spacer(modifier = Modifier
                 .size(1.dp, 9.dp)
                 .background(Color.LightGray))
-            TextItemComponent(value = collectAsState.versionName, title = "系统版本")
+            TextItemComponent(value = collectAsState.androidCode, title = "系统版本")
         }
     }
 

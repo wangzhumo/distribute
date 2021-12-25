@@ -19,13 +19,13 @@ class HomeViewModel(private val service: AppProjectApi) : ViewModel() {
     val projectList = listOf(
         AppProject(
             0,
-            "http://192.168.105.73:8990/static/icons/370093b5-8cee-4342-9652-f290855befca.png",
+            "http://192.168.44.71:8990/static/icons/370093b5-8cee-4342-9652-f290855befca.png",
             "音遇",
             "io.liuliu.music"
         ),
         AppProject(
             1,
-            "http://192.168.105.73:8990/static/icons/370093b5-8cee-4342-9652-f290855befca.png",
+            "http://192.168.44.71:8990/static/icons/370093b5-8cee-4342-9652-f290855befca.png",
             "哟密",
             "io.weixiang.umi"
         ),

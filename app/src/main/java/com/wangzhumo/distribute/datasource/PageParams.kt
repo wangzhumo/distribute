@@ -15,9 +15,17 @@ val globalPagingConfig: PagingConfig
 
 
 data class PageParams(val lastId:Long,val type:String,val id:Int){
-    fun next(lastId: Long):PageParams{
+    fun next(last_id: Long):PageParams{
         return PageParams(
-            lastId = lastId,
+            lastId = last_id,
+            type = type,
+            id = id
+        )
+    }
+
+    fun prev(last_id: Long):PageParams{
+        return PageParams(
+            lastId = last_id,
             type = type,
             id = id
         )
