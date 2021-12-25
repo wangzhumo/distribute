@@ -22,12 +22,4 @@ data class PageParams(val lastId:Long,val type:String,val id:Int){
             id = id
         )
     }
-
-    fun prev(last_id: Long):PageParams{
-        return PageParams(
-            lastId = last_id,
-            type = type,
-            id = id
-        )
-    }
 }

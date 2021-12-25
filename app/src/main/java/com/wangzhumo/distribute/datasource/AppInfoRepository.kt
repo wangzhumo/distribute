@@ -23,7 +23,11 @@ class AppInfoRepository(
 
                 LoadResult.Page(
                     data = pageList.getList(),
-                    prevKey = it,
+                    prevKey = if (it.lastId == 0L) {
+                        null
+                    } else {
+                        it
+                    },
                     nextKey = if (pageList.hasMore()) {
                         it.next(pageList.last_id)
                     } else {
@@ -35,6 +39,4 @@ class AppInfoRepository(
             LoadResult.Error(e)
         }
     }
-
-
 }

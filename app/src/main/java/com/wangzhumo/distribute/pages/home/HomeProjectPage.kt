@@ -50,7 +50,9 @@ fun RefreshLoadUse(pageViewModel: HomePageViewModel) {
         refreshState.isRefreshing = collectVersionPagingItems.loadState.refresh is LoadState.Loading
 
         Column {
-            AppInfoHeader(pageViewModel)
+            Box() {
+                AppInfoHeader(pageViewModel)
+            }
             LazyColumn(
                 modifier = Modifier
                     .fillMaxHeight()
@@ -92,7 +94,6 @@ fun RefreshLoadUse(pageViewModel: HomePageViewModel) {
             }
         }
     }
-
 }
 
 @Composable
