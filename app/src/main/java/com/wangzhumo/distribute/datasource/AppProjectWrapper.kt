@@ -1,6 +1,7 @@
 package com.wangzhumo.distribute.datasource
 
 import androidx.compose.runtime.Immutable
+import java.io.Serializable
 
 /**
  * If you have any questions, you can contact by email {wangzhumoo@gmail.com}
@@ -12,8 +13,16 @@ import androidx.compose.runtime.Immutable
 data class AppProjectWrapper(
     val appProject: AppProject,
     val localProject: LocalAppProject?
-)
+):Serializable
 
+
+/**
+ * 远端数据
+ */
+data class AppRemoteWrapper(
+    val version: VersionInfo,
+    val project: AppProject
+):Serializable
 
 /**
  * 本地的App消息
@@ -24,7 +33,7 @@ data class LocalAppProject(
     var versionName: String,
     var androidCode: String,
     var lastUpdateTime:Long = 0
-)
+):Serializable
 
 
 /**
@@ -36,7 +45,7 @@ data class AppProject(
     val app_icon: String,
     val apk_name: String,
     val app_id: String
-)
+):Serializable
 
 /**
  * 一个版本的信息
@@ -52,4 +61,4 @@ data class VersionInfo(
     val apk_id: Int,
     val release_version:Boolean,
     val timestamp:Long
-)
+):Serializable

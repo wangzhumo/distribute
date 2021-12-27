@@ -42,7 +42,7 @@ interface AppProjectApi {
     ): ResponseBody
 
     companion object {
-        private const val BASE_URL = "http://192.168.44.71:8990/"
+        private const val BASE_URL = "http://distribute.wangzhumo.com/"
 
         fun create():AppProjectApi {
             val looger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {
