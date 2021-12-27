@@ -8,6 +8,13 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 
+/**
+ * If you have any questions, you can contact by email {wangzhumoo@gmail.com}
+ *
+ * @author 王诛魔 2021/12/27 5:45
+ *
+ * 负责下载安装
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

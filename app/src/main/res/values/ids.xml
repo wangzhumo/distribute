@@ -7,4 +7,6 @@
 
     <!--Search-->
     <item name="screen_search_view" type="id"/>
+    <!--details-->
+    <item name="screen_details_view" type="id"/>
 </resources>

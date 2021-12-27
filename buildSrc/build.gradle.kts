@@ -6,4 +6,5 @@ plugins {
 repositories{
     google()
     mavenCentral()
+    maven("https://developer.huawei.com/repo/")
 }

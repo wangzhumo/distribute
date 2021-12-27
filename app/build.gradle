@@ -3,6 +3,7 @@ import com.wangzhumo.distribute.buildsrc.Libs
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.huawei.agconnect'
 }
 
 android {
@@ -18,6 +19,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        resConfigs "zh-rCN"
     }
 
     buildTypes {
@@ -49,6 +51,9 @@ android {
 }
 
 dependencies {
+    implementation Libs.Huawei.agconnect_core
+    implementation Libs.Huawei.scanplus
+
     implementation Libs.Kotlin.stdlib
     implementation Libs.Coroutines.android
 
@@ -91,5 +96,4 @@ dependencies {
     implementation Libs.Retrofit.retrofit
     implementation Libs.Retrofit.retrofit_gson
     implementation Libs.Retrofit.retrofit_scalars
-    implementation 'androidx.test.ext:junit-ktx:1.1.2'
 }

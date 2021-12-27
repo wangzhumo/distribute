@@ -18,15 +18,22 @@ package com.wangzhumo.distribute.buildsrc
 
 object Versions {
     const val ktlint = "0.43.0"
+    const val huawei = "1.5.2.300"
 }
 
 object Libs {
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.0.4"
+    const val huaweiGradlePlugin = "com.huawei.agconnect:agcp:1.5.2.300"
     const val jdkDesugar = "com.android.tools:desugar_jdk_libs:1.1.5"
 
     const val junit = "junit:junit:4.13"
 
     const val material = "com.google.android.material:material:1.3.0"
+
+    object Huawei{
+        const val agconnect_core="com.huawei.agconnect:agconnect-core:1.5.2.300"
+        const val scanplus="com.huawei.hms:scanplus:2.3.0.300"
+    }
 
     object Accompanist {
         const val version = "0.20.3"
@@ -140,4 +147,5 @@ object Libs {
     object Coil {
         const val coilCompose = "io.coil-kt:coil-compose:1.4.0"
     }
+
 }
