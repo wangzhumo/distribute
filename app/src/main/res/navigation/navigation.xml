@@ -13,4 +13,9 @@
         android:name="com.wangzhumo.distribute.pages.search.SearchFragment"
         android:label="search">
     </fragment>
+    <fragment
+        android:id="@+id/screen_details_page"
+        android:name="com.wangzhumo.distribute.pages.details.DetailsFragment"
+        android:label="details">
+    </fragment>
 </navigation>
